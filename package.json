@@ -1,0 +1,23 @@
+{
+  "name": "blackjack-ts",
+  "version": "1.0.0",
+  "description": "Blackjack game implemented with Node.js and TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "blackjack",
+    "game",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.19.37",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.1"
+  }
+}

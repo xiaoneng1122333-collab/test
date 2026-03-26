@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: #f0f0f0;
+        }
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Audio Test Page</h1>
+    <p>Click buttons to test the new sounds:</p>
+
+    <button onclick="testChipSound()">Test Chip/Money Sound</button>
+    <button onclick="testCardSound()">Test Card Dealing Sound</button>
+    <button onclick="testClickSound()">Test Click Sound</button>
+    <button onclick="testWinSound()">Test Win Sound</button>
+    <button onclick="testLoseSound()">Test Lose Sound</button>
+
+    <script type="module">
+        import { AudioManager } from './src/audio.js';
+
+        window.testChipSound = function() {
+            AudioManager.initialize();
+            AudioManager.playBetSound();
+            console.log('Playing chip sound...');
+        };
+
+        window.testCardSound = function() {
+            AudioManager.initialize();
+            AudioManager.playCardSound();
+            console.log('Playing card sound...');
+        };
+
+        window.testClickSound = function() {
+            AudioManager.initialize();
+            AudioManager.playClick();
+            console.log('Playing click sound...');
+        };
+
+        window.testWinSound = function() {
+            AudioManager.initialize();
+            AudioManager.playWinSound();
+            console.log('Playing win sound...');
+        };
+
+        window.testLoseSound = function() {
+            AudioManager.initialize();
+            AudioManager.playLoseSound();
+            console.log('Playing lose sound...');
+        };
+    </script>
+</body>
+</html>
